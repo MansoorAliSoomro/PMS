@@ -9,7 +9,8 @@ import { SidebarUserAreaComponent } from './layout/sidebar-user-area/sidebar-use
 import {ShareModule} from '../shared/share.module';
 import { HomeComponent } from './home/home.component';
 import { AppSidebarNavComponent } from './layout/app-sidebar-nav/app-sidebar-nav.component';
-import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     AppRoutingModule,
     ShareModule,
-    MatCardModule
+    MatTableModule
   ],
   providers: []
 })

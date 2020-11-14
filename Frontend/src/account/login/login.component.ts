@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {AuthDto, UserService} from '../../shared/services/users/user.service';
+import {Framework} from '../../shared/framework';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  constructor(private fb: FormBuilder, public router: Router) { }
+  constructor(private fb: FormBuilder, public router: Router, private userService: UserService, private framework: Framework) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -34,7 +36,18 @@ export class LoginComponent implements OnInit {
   }
   // login form submit
   submit(): void{
-    this.router.navigate(['/app/home']);
+    const authenticate: AuthDto = this.loginForm.value;
+    this.userService.login(authenticate).subscribe(result => {
+      console.log(result);
+      const jwt = result?.jwt;
+      if (jwt != null){
+        this.framework.session.setToken('auth-token', jwt, 1);
+        window.location.href = '/app/home';
+      }else{
+        this.framework.message.error('Wrong username or password', 'please re-enter your details again');
+      }
+    });
+    // this.router.navigate(['/app/home']);
     return;
   }
 

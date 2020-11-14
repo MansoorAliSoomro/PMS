@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace PMS.Utility
+﻿namespace PMS.Utility
 {   
     public class Copier<TParent, TChild> where TParent : class
                                             where TChild : class

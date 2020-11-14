@@ -1,6 +1,5 @@
 import {Component, ElementRef, HostListener, Input, OnInit} from '@angular/core';
 import {Framework} from '../../framework';
-import {SideBar} from '../../sidebar';
 
 @Component({
   selector: 'app-popup-dialog',

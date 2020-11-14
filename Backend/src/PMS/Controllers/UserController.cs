@@ -105,7 +105,7 @@ namespace PMS.Controllers
             try
             {
                 appSession.userId = user.Id;
-                appSession.Usernamem = user.Username;
+                appSession.Username = user.Username;
                 appSession.Name = user.Name;
                 appSession.RoleName = user.Role.Name;
                 appSession.AllRoles = new List<string>();

@@ -8,7 +8,7 @@ namespace PMS.Dto.User
     public class AppSession
     {
         public long userId { get; set; }
-        public string Usernamem { get; set; }
+        public string Username { get; set; }
         public string Name { get; set; }
         public string RoleName { get; set; }
         public List<string> AllRoles { get; set; } 

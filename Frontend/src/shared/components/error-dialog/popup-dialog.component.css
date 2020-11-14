@@ -52,6 +52,7 @@
 .popup--visible {
   visibility: visible;
   transition: visibility 0ms;
+  z-index: var(--z-index-highest);
 }
 
 .popup__background {

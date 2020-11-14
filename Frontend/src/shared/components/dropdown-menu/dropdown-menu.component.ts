@@ -46,7 +46,6 @@ export class DropdownMenuComponent implements OnInit, AfterContentInit {
       // tslint:disable-next-line:prefer-for-of
       for (let i = 0; i < this.menu.nativeElement.children.length; i++){
         this.menu.nativeElement.children[i].addEventListener('click', (event) => {
-          console.log(event);
           this.closeMenu();
         });
       }

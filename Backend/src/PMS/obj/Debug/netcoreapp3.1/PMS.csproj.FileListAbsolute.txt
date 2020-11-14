@@ -190,3 +190,5 @@ E:\Projects\PMS\Backend\src\PMS\obj\Debug\netcoreapp3.1\staticwebassets\PMS.Stat
 E:\Projects\PMS\Backend\src\PMS\obj\Debug\netcoreapp3.1\PMS.dll
 E:\Projects\PMS\Backend\src\PMS\obj\Debug\netcoreapp3.1\PMS.pdb
 E:\Projects\PMS\Backend\src\PMS\obj\Debug\netcoreapp3.1\PMS.genruntimeconfig.cache
+E:\Projects\PMS\Backend\src\PMS\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+E:\Projects\PMS\Backend\src\PMS\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
